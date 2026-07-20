@@ -359,6 +359,119 @@
             color: var(--text);
         }
 
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            margin-top: 2rem;
+        }
+
+        .project-card {
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.9) 0%, rgba(51, 65, 85, 0.9) 100%);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            border-radius: 0.75rem;
+            padding: 2rem;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+            transition: left 0.5s;
+        }
+
+        .project-card:hover {
+            border-color: var(--accent-light);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.2);
+        }
+
+        .project-card:hover::before {
+            left: 100%;
+        }
+
+        .project-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-icon {
+            font-size: 2rem;
+            min-width: 50px;
+        }
+
+        .project-title {
+            font-size: 1.3rem;
+            color: var(--accent-light);
+            margin: 0;
+            font-weight: 700;
+        }
+
+        .project-subtitle {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin: 0.5rem 0 1rem 0;
+        }
+
+        .project-description {
+            color: var(--text);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .project-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(59, 130, 246, 0.1);
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--success);
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 0.3rem;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .project-tag {
+            background: rgba(59, 130, 246, 0.15);
+            color: var(--accent-light);
+            padding: 0.35rem 0.75rem;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+        }
+
         /* Achievements */
         .achievements-grid {
             display: grid;
@@ -487,6 +600,7 @@
                 <li><a href="#home">Início</a></li>
                 <li><a href="#experience">Experiência</a></li>
                 <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#projects">Projetos</a></li>
                 <li><a href="#achievements">Destaques</a></li>
                 <li><a href="#about">Sobre</a></li>
                 <li><a href="#contact">Contato</a></li>
@@ -606,7 +720,19 @@
             </div>
 
             <div class="skill-card fade-in">
-                <h3>💻 Linguagens & Frameworks</h3>
+                <h3>� Testes Manuais & Exploratórios</h3>
+                <div class="skill-tags">
+                    <span class="tag">Test Planning</span>
+                    <span class="tag">Exploratory Testing</span>
+                    <span class="tag">Test Cases</span>
+                    <span class="tag">Bug Reporting</span>
+                    <span class="tag">Casos Limite</span>
+                    <span class="tag">Usabilidade</span>
+                </div>
+            </div>
+
+            <div class="skill-card fade-in">
+                <h3>�💻 Linguagens & Frameworks</h3>
                 <div class="skill-tags">
                     <span class="tag">TypeScript</span>
                     <span class="tag">JavaScript</span>
@@ -660,6 +786,150 @@
                     <span class="tag">Métricas Inteligentes</span>
                     <span class="tag">Data-Driven</span>
                     <span class="tag">Observabilidade</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">Projetos & Automações</h2>
+            
+            <div class="projects-grid">
+                <!-- SEFA Project -->
+                <div class="project-card fade-in">
+                    <div class="project-header">
+                        <div class="project-icon">⚙️</div>
+                        <div>
+                            <h3 class="project-title">SEFA</h3>
+                            <p class="project-subtitle">Sistema Fiscal - Automação E2E + API</p>
+                        </div>
+                    </div>
+                    
+                    <p class="project-description">
+                        Suite robusta de automação para sistema fiscal crítico. Combina testes E2E de interface com testes de API em um único pipeline, gerando evidências, métricas consolidadas e dashboard de acompanhamento.
+                    </p>
+                    
+                    <div class="project-stats">
+                        <div class="stat">
+                            <span class="stat-number">26</span>
+                            <span class="stat-label">Specs E2E+API</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">95%+</span>
+                            <span class="stat-label">Taxa Sucesso</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">8m</span>
+                            <span class="stat-label">Tempo Execução</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Fluxos Críticos</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-tags">
+                        <span class="project-tag">Cypress 14</span>
+                        <span class="project-tag">E2E Testing</span>
+                        <span class="project-tag">API Testing</span>
+                        <span class="project-tag">Mochawesome</span>
+                        <span class="project-tag">Power BI</span>
+                        <span class="project-tag">Dashboard</span>
+                        <span class="project-tag">Métricas</span>
+                        <span class="project-tag">CI/CD</span>
+                    </div>
+                </div>
+
+                <!-- ParaBank Project -->
+                <div class="project-card fade-in">
+                    <div class="project-header">
+                        <div class="project-icon">🏦</div>
+                        <div>
+                            <h3 class="project-title">ParaBank</h3>
+                            <p class="project-subtitle">Plataforma Bancária - Testes E2E</p>
+                        </div>
+                    </div>
+                    
+                    <p class="project-description">
+                        Suite completa de automação para plataforma de banking demo. Testes funcionais, de usabilidade e casos limite com cobertura abrangente de fluxos críticos de conta e transferências.
+                    </p>
+                    
+                    <div class="project-stats">
+                        <div class="stat">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Test Cases</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">90%+</span>
+                            <span class="stat-label">Taxa Sucesso</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">10m</span>
+                            <span class="stat-label">Tempo Execução</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Cobertura</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-tags">
+                        <span class="project-tag">Playwright</span>
+                        <span class="project-tag">E2E Testing</span>
+                        <span class="project-tag">POM Pattern</span>
+                        <span class="project-tag">TypeScript</span>
+                        <span class="project-tag">Testes Manuais</span>
+                        <span class="project-tag">Casos Limite</span>
+                        <span class="project-tag">Usabilidade</span>
+                        <span class="project-tag">GitHub</span>
+                    </div>
+                </div>
+
+                <!-- Manual Testing -->
+                <div class="project-card fade-in">
+                    <div class="project-header">
+                        <div class="project-icon">🔬</div>
+                        <div>
+                            <h3 class="project-title">Testes Manuais & Exploratórios</h3>
+                            <p class="project-subtitle">Expertise em Qualidade</p>
+                        </div>
+                    </div>
+                    
+                    <p class="project-description">
+                        Profundo conhecimento em testes manuais, planejamento de testes, exploração de cenários complexos e identificação de casos limite. Experiência com sistemas críticos (fiscais, financeiros e governamentais).
+                    </p>
+                    
+                    <div class="project-stats">
+                        <div class="stat">
+                            <span class="stat-number">4+</span>
+                            <span class="stat-label">Anos Experiência</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">100+</span>
+                            <span class="stat-label">Testes Executados</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">200+</span>
+                            <span class="stat-label">Bugs Reportados</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">95%</span>
+                            <span class="stat-label">Acurácia</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-tags">
+                        <span class="project-tag">Test Planning</span>
+                        <span class="project-tag">Exploratory</span>
+                        <span class="project-tag">SEFA/Fiscal</span>
+                        <span class="project-tag">FIRJAN</span>
+                        <span class="project-tag">Banco Amazonas</span>
+                        <span class="project-tag">Casos Limite</span>
+                        <span class="project-tag">Bug Report</span>
+                        <span class="project-tag">Documentação</span>
+                    </div>
                 </div>
             </div>
         </div>
