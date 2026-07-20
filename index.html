@@ -90,6 +90,22 @@
             text-align: center;
         }
 
+        .profile-photo {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--accent);
+            box-shadow: 0 0 0 6px rgba(59, 130, 246, 0.15), 0 20px 40px rgba(0, 0, 0, 0.4);
+            margin-bottom: 1.5rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .profile-photo:hover {
+            transform: scale(1.04);
+            box-shadow: 0 0 0 8px rgba(59, 130, 246, 0.25), 0 24px 48px rgba(0, 0, 0, 0.5);
+        }
+
         .hero h1 {
             font-size: 3.2rem;
             margin-bottom: 0.5rem;
@@ -610,6 +626,7 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero fade-in">
+        <img src="assets/profile.jpg" alt="César Minerva" class="profile-photo" />
         <h1>César Minerva</h1>
         <p class="subtitle">Senior QA Engineer | Test Automation | Quality Engineering</p>
         <p class="location">📍 Joinville, SC, Brasil | 🏢 Stefanini Group | 🌐 100% Remoto</p>
@@ -645,7 +662,7 @@
     <!-- Experience Section -->
     <section id="experience">
         <h2 class="section-title">Experiência Profissional</h2>
-        
+
         <div class="experience-timeline">
             <!-- Current Role -->
             <div class="experience-item fade-in">
@@ -705,7 +722,7 @@
     <!-- Skills Section -->
     <section id="skills">
         <h2 class="section-title">Habilidades Técnicas</h2>
-        
+
         <div class="skills-grid">
             <div class="skill-card fade-in">
                 <h3>🧪 Automação de Testes</h3>
@@ -795,7 +812,7 @@
     <section id="projects">
         <div class="container">
             <h2 class="section-title">Projetos & Automações</h2>
-            
+
             <div class="projects-grid">
                 <!-- SEFA Project -->
                 <div class="project-card fade-in">
@@ -806,11 +823,11 @@
                             <p class="project-subtitle">Sistema Fiscal - Automação E2E + API</p>
                         </div>
                     </div>
-                    
+
                     <p class="project-description">
                         Suite robusta de automação para sistema fiscal crítico. Combina testes E2E de interface com testes de API em um único pipeline, gerando evidências, métricas consolidadas e dashboard de acompanhamento.
                     </p>
-                    
+
                     <div class="project-stats">
                         <div class="stat">
                             <span class="stat-number">26</span>
@@ -829,7 +846,7 @@
                             <span class="stat-label">Fluxos Críticos</span>
                         </div>
                     </div>
-                    
+
                     <div class="project-tags">
                         <span class="project-tag">Cypress 14</span>
                         <span class="project-tag">E2E Testing</span>
@@ -851,11 +868,11 @@
                             <p class="project-subtitle">Plataforma Bancária - Testes E2E</p>
                         </div>
                     </div>
-                    
+
                     <p class="project-description">
                         Suite completa de automação para plataforma de banking demo. Testes funcionais, de usabilidade e casos limite com cobertura abrangente de fluxos críticos de conta e transferências.
                     </p>
-                    
+
                     <div class="project-stats">
                         <div class="stat">
                             <span class="stat-number">50+</span>
@@ -874,7 +891,7 @@
                             <span class="stat-label">Cobertura</span>
                         </div>
                     </div>
-                    
+
                     <div class="project-tags">
                         <span class="project-tag">Playwright</span>
                         <span class="project-tag">E2E Testing</span>
@@ -896,11 +913,11 @@
                             <p class="project-subtitle">Expertise em Qualidade</p>
                         </div>
                     </div>
-                    
+
                     <p class="project-description">
                         Profundo conhecimento em testes manuais, planejamento de testes, exploração de cenários complexos e identificação de casos limite. Experiência com sistemas críticos (fiscais, financeiros e governamentais).
                     </p>
-                    
+
                     <div class="project-stats">
                         <div class="stat">
                             <span class="stat-number">4+</span>
@@ -919,7 +936,7 @@
                             <span class="stat-label">Acurácia</span>
                         </div>
                     </div>
-                    
+
                     <div class="project-tags">
                         <span class="project-tag">Test Planning</span>
                         <span class="project-tag">Exploratory</span>
@@ -938,7 +955,7 @@
     <!-- Achievements Section -->
     <section id="achievements">
         <h2 class="section-title">Destaques & Conquistas</h2>
-        
+
         <div class="achievements-grid">
             <div class="achievement-card fade-in">
                 <div class="achievement-icon">📚</div>
@@ -981,7 +998,7 @@
     <!-- About Section -->
     <section id="about">
         <h2 class="section-title">Sobre Mim</h2>
-        
+
         <div class="about-content">
             <div class="about-text">
                 <h3>Profissional de QA com Visão Estratégica</h3>
@@ -1017,12 +1034,12 @@
     <!-- Contact Section -->
     <section id="contact">
         <h2 class="section-title">Vamos Conectar?</h2>
-        
+
         <div class="contact-content">
             <p style="font-size: 1.1rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
                 Estou sempre aberto a conversas sobre QA, automação, qualidade de software e novas oportunidades profissionais. Conecte comigo!
             </p>
-            
+
             <div class="contact-links">
                 <a href="https://www.linkedin.com/in/cesarminerva/" target="_blank" class="contact-link">
                     <span>🔗</span>
