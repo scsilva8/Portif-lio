@@ -1,4 +1,9 @@
-# Cesar Minerva | Senior QA Engineer
+# César Minerva | Senior QA Engineer
+
+<picture>
+	<source media="(max-width: 768px)" srcset="assets/readme-banner-mobile.svg">
+	<img src="assets/readme-banner.svg" alt="Banner do portfolio de César Minerva">
+</picture>
 
 > Portfolio profissional com foco em Quality Engineering, automacao de testes e estrategia de qualidade para Web e APIs.
 
