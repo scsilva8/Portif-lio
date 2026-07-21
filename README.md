@@ -1,4 +1,3 @@
-# César Minerva | Senior QA Engineer
 
 <picture>
 	<source media="(max-width: 768px)" srcset="assets/readme-banner-mobile.svg">
